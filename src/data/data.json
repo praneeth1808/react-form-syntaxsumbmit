@@ -1,0 +1,144 @@
+{
+  "data": [
+    {
+      "Title": "how to import pandas",
+      "Syntax": "import pandas as pd",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 1
+    },
+    {
+      "Title": "how to create series",
+      "Syntax": "s = pd.Series([1, 3, 5, np.nan, 6, 8])",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 2
+    },
+    {
+      "Title": "Creating a DataFrame by passing a NumPy array, with a datetime index and labeled columns",
+      "Syntax": "dates = pd.date_range(\"20130101\", periods=6)",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 3
+    },
+    {
+      "Title": "how to create data frame , by selecting dates as index",
+      "Syntax": "dates = pd.date_range(\"20130101\", periods=6) \\n df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list(\"ABCD\"))",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 4
+    },
+    {
+      "Title": "dataframe using dictionary ",
+      "Syntax": "df = pd.DataFrame({\"A\":[0,2,4,6],\"B\":[1,2,3,4]})",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 5
+    },
+    {
+      "Title": "how to get datatypes of data frame columns",
+      "Syntax": "df.dtypes",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 6
+    },
+    {
+      "Title": "how to view dataframe",
+      "Syntax": "df.head() or df.tail()",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 7
+    },
+    {
+      "Title": "how to view top rows of dataframe",
+      "Syntax": "df.head()",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 8
+    },
+    {
+      "Title": "how to view last rows of dataframe",
+      "Syntax": "df.tail()",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 9
+    },
+    {
+      "Title": "how to view only n top rows",
+      "Syntax": "df.head(n)",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 10
+    },
+    {
+      "Title": "how to view only n bottom rows",
+      "Syntax": "df.tail(n)",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 11
+    },
+    {
+      "Title": "how to get index of dataframe",
+      "Syntax": "df.index",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 12
+    },
+    {
+      "Title": "how to get list of columns in dataframe",
+      "Syntax": "df.columns",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 13
+    },
+    {
+      "Title": "how to convert dataframe to numpy array",
+      "Syntax": "df.to_numpy()",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 14
+    },
+    {
+      "Title": "how to get statistical summary of the dataframe",
+      "Syntax": "df.describe()",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 15
+    },
+    {
+      "Title": "how to transpose a dataframe",
+      "Syntax": "df.T",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 16
+    },
+    {
+      "Title": "how to sort dataframe by index",
+      "Syntax": "df.sort_index(axis=1, ascending= True)",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 17
+    },
+    {
+      "Title": "how to sort by column",
+      "Syntax": "df.sort_values(by=\"colName\")",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 18
+    },
+    {
+      "Title": "how to fetch single column from dataframe",
+      "Syntax": "df[\"colName\"]",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 19
+    },
+    {
+      "Title": "how to slice the rows in DataFrame",
+      "Syntax": "df[0:3]",
+      "Type": "Syntax",
+      "updating": false,
+      "id": 20
+    }
+  ]
+}

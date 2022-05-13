@@ -1,0 +1,781 @@
+{
+    "data": [
+        {
+            "Title": "how to import pandas",
+            "Syntax": "import pandas as pd",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 1
+        },
+        {
+            "Title": "how to create series",
+            "Syntax": "s = pd.Series([1, 3, 5, np.nan, 6, 8])",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 2
+        },
+        {
+            "Title": "Creating a DataFrame by passing a NumPy array, with a datetime index and labeled columns",
+            "Syntax": "dates = pd.date_range(\"20130101\", periods=6)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 3
+        },
+        {
+            "Title": "how to create data frame , by selecting dates as index",
+            "Syntax": "dates = pd.date_range(\"20130101\", periods=6) \\n df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list(\"ABCD\"))",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 4
+        },
+        {
+            "Title": "dataframe using dictionary ",
+            "Syntax": "df = pd.DataFrame({\"A\":[0,2,4,6],\"B\":[1,2,3,4]})",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 5
+        },
+        {
+            "Title": "how to get datatypes of data frame columns",
+            "Syntax": "df.dtypes",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 6
+        },
+        {
+            "Title": "how to view dataframe",
+            "Syntax": "df.head() or df.tail()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 7
+        },
+        {
+            "Title": "how to view top rows of dataframe",
+            "Syntax": "df.head()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 8
+        },
+        {
+            "Title": "how to view last rows of dataframe",
+            "Syntax": "df.tail()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 9
+        },
+        {
+            "Title": "how to view only n top rows",
+            "Syntax": "df.head(n)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 10
+        },
+        {
+            "Title": "how to view only n bottom rows",
+            "Syntax": "df.tail(n)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 11
+        },
+        {
+            "Title": "how to get index of dataframe",
+            "Syntax": "df.index",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 12
+        },
+        {
+            "Title": "how to get list of columns in dataframe",
+            "Syntax": "df.columns",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 13
+        },
+        {
+            "Title": "how to convert dataframe to numpy array",
+            "Syntax": "df.to_numpy()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 14
+        },
+        {
+            "Title": "how to get statistical summary of the dataframe",
+            "Syntax": "df.describe()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 15
+        },
+        {
+            "Title": "how to transpose a dataframe",
+            "Syntax": "df.T",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 16
+        },
+        {
+            "Title": "how to sort dataframe by index",
+            "Syntax": "df.sort_index(axis=1, ascending= True)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 17
+        },
+        {
+            "Title": "how to sort by column",
+            "Syntax": "df.sort_values(by=\"colName\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 18
+        },
+        {
+            "Title": "how to fetch single column from dataframe",
+            "Syntax": "df[\"colName\"]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 19
+        },
+        {
+            "Title": "how to slice the rows in DataFrame",
+            "Syntax": "df[0:3]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 20
+        },
+        {
+            "Title": "how to get row by using index",
+            "Syntax": "df.loc[\"index\"]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 21
+        },
+        {
+            "Title": "how to get rows by position in a dataframe",
+            "Syntax": "df.iloc[3]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 22
+        },
+        {
+            "Title": "select rows by column value in a dataframe",
+            "Syntax": "df[df[\"A\"] > 0]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 23
+        },
+        {
+            "Title": "select values by condition on entire dataframe",
+            "Syntax": "df[df > 0]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 24
+        },
+        {
+            "Title": "how to select rows that has list of values",
+            "Syntax": "df2[df2[\"E\"].isin([\"two\", \"four\"])]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 25
+        },
+        {
+            "Title": "how to add new column to the dataframe",
+            "Syntax": "df[\"F\"] = [1,2,3,4]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 26
+        },
+        {
+            "Title": "how to add column that automatically aligns to dataframe",
+            "Syntax": "df[\"F\"] = pd.Series([1, 2, 3, 4, 5, 6], index=[1,2,3,4,5,6])",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 27
+        },
+        {
+            "Title": "set values in dataframe by label",
+            "Syntax": "df.at[dates[0], \"A\"] = 0",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 28
+        },
+        {
+            "Title": "setting values by position ",
+            "Syntax": "df.iat[0, 1] = 0",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 29
+        },
+        {
+            "Title": "how to copy a dataframe without referencing ",
+            "Syntax": "df2 = df.copy()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 30
+        },
+        {
+            "Title": "how to drop null values",
+            "Syntax": "df.dropna()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 31
+        },
+        {
+            "Title": "how to fill null values by some value",
+            "Syntax": "df1.fillna(value=5)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 32
+        },
+        {
+            "Title": "To get the boolean mask where values are nan",
+            "Syntax": "pd.isna(df1)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 33
+        },
+        {
+            "Title": "how to get mean of each column in a dataframe",
+            "Syntax": "df.mean()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 34
+        },
+        {
+            "Title": "how to get mean of each row",
+            "Syntax": "df.mean(1) # this sets axis =1 i.e row",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 35
+        },
+        {
+            "Title": "Applying functions to the dataframe",
+            "Syntax": "df.apply(lambda x: x.max() - x.min())",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 36
+        },
+        {
+            "Title": "how to get count of values in a dataframe column",
+            "Syntax": "df[\"colName\"].value_counts()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 37
+        },
+        {
+            "Title": "how to concat two dataframe",
+            "Syntax": "pd.concat(df1,df2)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 38
+        },
+        {
+            "Title": "how to merge data frames based on key value",
+            "Syntax": "pd.merge(df1, df2, on=\"key\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 39
+        },
+        {
+            "Title": "how to apply groupby or grouping",
+            "Syntax": "df.groupby(\"A\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 40
+        },
+        {
+            "Title": "how to get sum on group by values",
+            "Syntax": "df.groupby(\"A\").sum()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 41
+        },
+        {
+            "Title": "how to stack or compress the dataframe",
+            "Syntax": "stacked = df2.stack()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 42
+        },
+        {
+            "Title": "how to unstack or uncompress the dataframe",
+            "Syntax": "stacked.unstack()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 43
+        },
+        {
+            "Title": "how to create array of dates",
+            "Syntax": " pd.date_range(\"3/6/2012 00:00\", periods=5, freq=\"D\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 44
+        },
+        {
+            "Title": "how to convert string type to categorical columns in dataframe",
+            "Syntax": "df[\"grade\"] = df[\"raw_grade\"].astype(\"category\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 45
+        },
+        {
+            "Title": "how to get count of each categorical values",
+            "Syntax": "df.groupby(\"grade\").size()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 46
+        },
+        {
+            "Title": "how to draw line plot of each column in dataframe",
+            "Syntax": "df.plot()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 47
+        },
+        {
+            "Title": "how to save dataframe into csv file",
+            "Syntax": "df.to_csv(\"foo.csv\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 48
+        },
+        {
+            "Title": "how to read from csv file ",
+            "Syntax": "pd.read_csv(\"foo.csv\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 49
+        },
+        {
+            "Title": "Writing to a HDF5 Store from a dataframe",
+            "Syntax": "df.to_hdf(\"foo.h5\", \"df\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 50
+        },
+        {
+            "Title": "Reading from a HDF5 Store to a dataframe",
+            "Syntax": "pd.read_hdf(\"foo.h5\", \"df\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 51
+        },
+        {
+            "Title": "Writing to an excel file from a dataframe",
+            "Syntax": "df.to_excel(\"foo.xlsx\", sheet_name=\"Sheet1\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 52
+        },
+        {
+            "Title": "Reading from an excel file to a dataframe",
+            "Syntax": "pd.read_excel(\"foo.xlsx\", \"Sheet1\", index_col=None, na_values=[\"NA\"])",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 53
+        },
+        {
+            "Title": "what are the data structures supported by pandas",
+            "Syntax": "Series and DataFrames",
+            "Type": "Non",
+            "updating": false,
+            "id": 54
+        },
+        {
+            "Title": "how to convert dictionary to a dataframe",
+            "Syntax": " pd.Series({\"b\": 1, \"a\": 0, \"c\": 2})",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 55
+        },
+        {
+            "Title": "how to get mean of series",
+            "Syntax": "s.mean()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 56
+        },
+        {
+            "Title": "how to get median of the series",
+            "Syntax": "s.median()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 57
+        },
+        {
+            "Title": "how to get exponents of the series",
+            "Syntax": "np.exp(s)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 58
+        },
+        {
+            "Title": "how to select few values from series by index",
+            "Syntax": "s[[4, 3, 1]]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 59
+        },
+        {
+            "Title": "how to get the data type of series",
+            "Syntax": "s.dtype",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 60
+        },
+        {
+            "Title": "how to convert series to array",
+            "Syntax": "s.array",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 61
+        },
+        {
+            "Title": "how to get numpy array from series ",
+            "Syntax": "s.to_numpy()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 62
+        },
+        {
+            "Title": "can series be used as a dictionary",
+            "Syntax": "yes",
+            "Type": "Non",
+            "updating": false,
+            "id": 63
+        },
+        {
+            "Title": "how to find if a index exists in series",
+            "Syntax": "\"e\" in s",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 64
+        },
+        {
+            "Title": "how to get a value from series by index",
+            "Syntax": "s.get(\"f\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 65
+        },
+        {
+            "Title": "how to get a value from series by index and null if values doesn't exits",
+            "Syntax": "s.get(\"f\", np.nan)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 66
+        },
+        {
+            "Title": "how to sum two series",
+            "Syntax": "s1 + s2",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 67
+        },
+        {
+            "Title": "how to multiply all values in series by 2",
+            "Syntax": "s * 2",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 68
+        },
+        {
+            "Title": "how to name a series ",
+            "Syntax": "s = pd.Series(np.random.randn(5), name=\"something\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 69
+        },
+        {
+            "Title": "how to update the name of a series",
+            "Syntax": "s2 = s.rename(\"different\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 70
+        },
+        {
+            "Title": "how to create dataframe from dictionary of tuples",
+            "Syntax": "pd.DataFrame(  {  (\"a\", \"b\"): {(\"A\", \"B\"): 1, (\"A\", \"C\"): 2},   (\"a\", \"a\"): {(\"A\", \"C\"): 3, (\"A\", \"B\"): 4}}) ",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 71
+        },
+        {
+            "Title": "how to delete a column in dataframe",
+            "Syntax": "del df[\"A\"]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 72
+        },
+        {
+            "Title": "how to pop out a column from datagram",
+            "Syntax": "df.pop(\"B\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 73
+        },
+        {
+            "Title": "how to add scalar value as a column to all rows",
+            "Syntax": "df[\"foo\"] = \"bar\"",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 74
+        },
+        {
+            "Title": "how to create new column using assign function",
+            "Syntax": "df.assign(\"newCol\" = lambda x:(x[\"A\"]/x[\"B\"]))",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 75
+        },
+        {
+            "Title": "how to create a scatter plot using pandas",
+            "Syntax": "df.plot(kind=\"scatter\",x=\"A\",y=\"B\")",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 76
+        },
+        {
+            "Title": "how to get summary from dataframe",
+            "Syntax": "df.info()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 77
+        },
+        {
+            "Title": "how to set options to display more columns",
+            "Syntax": "pd.set_option(\"display.max_colwidth\", 100)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 78
+        },
+        {
+            "Title": "how to update column names",
+            "Syntax": "df.columns = [x.lower() for x in df.columns]",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 79
+        },
+        {
+            "Title": "how to compare values in two data frames",
+            "Syntax": "df.gt(df2)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 80
+        },
+        {
+            "Title": "how to compare values in two data frames by greater than",
+            "Syntax": "df.gt(df2)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 81
+        },
+        {
+            "Title": "how to compare values in two data frames by not equal to",
+            "Syntax": "df2.ne(df)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 82
+        },
+        {
+            "Title": "Boolean reduction possible on dataframe",
+            "Syntax": "empty, any(), all(), and bool()",
+            "Type": "Non",
+            "updating": false,
+            "id": 83
+        },
+        {
+            "Title": "how to use all on dataframe",
+            "Syntax": "(df > 0).all()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 84
+        },
+        {
+            "Title": "how to find columns with less than 5 in a dataframe",
+            "Syntax": "(df < 5).any()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 85
+        },
+        {
+            "Title": "how to find rows with all values above 5",
+            "Syntax": "(df > 5).all()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 86
+        },
+        {
+            "Title": "how to check if dataframe is empty",
+            "Syntax": "df.empty",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 87
+        },
+        {
+            "Title": "how to find sum of values of columns by skipping null values",
+            "Syntax": "df.sum(axis=1, skipna=True)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 88
+        },
+        {
+            "Title": "how to get standard deviation of a columns in dataframe",
+            "Syntax": "df.std()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 89
+        },
+        {
+            "Title": "how to get count of values of each column in a dataframe",
+            "Syntax": "df.count()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 90
+        },
+        {
+            "Title": "how to find Mean absolute deviation of each column in a dataframe",
+            "Syntax": "df.mad()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 91
+        },
+        {
+            "Title": "how to find Arithmetic median of values of each column in a dataframe",
+            "Syntax": "df.median()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 92
+        },
+        {
+            "Title": "how to find minimum of each column in a dataframe",
+            "Syntax": "df.min()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 93
+        },
+        {
+            "Title": "how to find maximum of each column in a dataframe",
+            "Syntax": "df.max()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 94
+        },
+        {
+            "Title": "how to find mode of each column in a dataframe",
+            "Syntax": "df.mode()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 95
+        },
+        {
+            "Title": "how to find Absolute Value of each column in a dataframe",
+            "Syntax": "df.abs()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 96
+        },
+        {
+            "Title": "how to find product of values of each column in a dataframe",
+            "Syntax": "df.prod()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 97
+        },
+        {
+            "Title": "how to find unbiased variance of each column in a dataframe",
+            "Syntax": "df.var()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 98
+        },
+        {
+            "Title": "how to find Standard error of the mean of each column in a dataframe",
+            "Syntax": "df.sem()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 99
+        },
+        {
+            "Title": "how to find Sample skewness of each column in a dataframe",
+            "Syntax": "df.skew()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 100
+        },
+        {
+            "Title": "how to find Sample kurtosis of each column in a dataframe",
+            "Syntax": "df.kurt()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 101
+        },
+        {
+            "Title": "how to find Sample quantile of each column in a dataframe",
+            "Syntax": "df.quantile()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 102
+        },
+        {
+            "Title": "how to find cumulative sum of each column in a dataframe",
+            "Syntax": "df.cumsum()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 103
+        },
+        {
+            "Title": "how to find cumulative product of each column in a dataframe",
+            "Syntax": "df.cumprod()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 104
+        },
+        {
+            "Title": "how to find cumulative maximum of each column in a dataframe",
+            "Syntax": "df.cummax()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 105
+        },
+        {
+            "Title": "how to find cumulative minimum of each column in a dataframe",
+            "Syntax": "df.cummin()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 106
+        },
+        {
+            "Title": "how to get number of unique values in a column or series",
+            "Syntax": "df[\"col\"].nunique() / S.nunique()",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 107
+        },
+        {
+            "Title": "how to get minimum value index in each column",
+            "Syntax": "df.idmin(axis=0)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 108
+        },
+        {
+            "Title": "how to get minimum value index in each row",
+            "Syntax": "df.idmin(axis=1)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 109
+        },
+        {
+            "Title": "how to get maximum value index in each column",
+            "Syntax": "df.idmax(axis=0)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 110
+        },
+        {
+            "Title": "how to get maximum value index in each row",
+            "Syntax": "df.idmax(axis=1)",
+            "Type": "Syntax",
+            "updating": false,
+            "id": 111
+        }
+    ]
+}
